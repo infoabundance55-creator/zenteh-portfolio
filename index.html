@@ -139,7 +139,10 @@ section{padding:96px 0;border-top:1px solid var(--line)}
 @media (max-width:640px){.role-row{grid-template-columns:1fr;gap:6px}}
 
 /* skills */
-.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.skills .wide{grid-column:1/-1}
+.tool-label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px}
+.tool-label:first-of-type{margin-top:0}
 .skills article{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
 .skills h3{font-size:16px;color:#fff;margin-bottom:14px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
@@ -421,12 +424,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <section id="skills">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Toolkit</p>
+        <p class="eyebrow">Skills &amp; tools</p>
         <h2>What I bring to the team.</h2>
       </div>
       <div class="skills">
-        <article><h3>Paid media &amp; measurement</h3><div class="chips"><span>Meta Ads Manager</span><span>Advantage+</span><span>Google Ads</span><span>Search · Shopping · PMax</span><span>Pixel &amp; CAPI</span><span>Custom audiences</span><span>Creative testing</span><span>Daily reporting</span></div></article>
-        <article><h3>Growth &amp; content</h3><div class="chips"><span>Launch planning</span><span>KOL partnerships</span><span>Community growth</span><span>Xiaohongshu</span><span>TikTok</span><span>X · Telegram · Discord</span><span>Web3 go-to-market</span><span>Generative AI</span></div></article>
+        <article class="wide"><h3>Marketing &amp; ads skills</h3><div class="chips"><span>Performance marketing</span><span>Media buying</span><span>Meta Ads · Advantage+</span><span>Google Ads · Search, Shopping, PMax</span><span>YouTube &amp; Demand Gen</span><span>Pixel &amp; CAPI tracking</span><span>Campaign &amp; launch planning</span><span>Budget &amp; bid strategy</span><span>Creative testing</span><span>Performance reporting &amp; analysis</span><span>Copywriting · Traditional Chinese &amp; English</span><span>KOL &amp; influencer marketing</span><span>Xiaohongshu &amp; TikTok marketing</span><span>Community growth</span><span>Web3 go-to-market</span><span>Partnerships &amp; BD</span></div></article>
+        <article><h3>Tools</h3>
+          <p class="tool-label">AI</p><div class="chips"><span>Claude</span><span>ChatGPT</span></div>
+          <p class="tool-label">Design &amp; video</p><div class="chips"><span>Canva</span><span>Adobe Express</span><span>CapCut</span></div>
+          <p class="tool-label">Ad platforms</p><div class="chips"><span>Meta Ads Manager</span><span>Meta Business Manager</span><span>Google Ads</span></div>
+        </article>
         <article><h3>Markets &amp; languages</h3><div class="chips"><span>Hong Kong &amp; Macau</span><span>Taiwan</span><span>Australia &amp; New Zealand</span><span>Malaysia</span><span>China</span><span>English</span><span>Mandarin</span><span>Cantonese</span></div></article>
       </div>
     </div>
