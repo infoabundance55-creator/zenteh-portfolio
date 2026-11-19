@@ -89,6 +89,18 @@ section{padding:96px 0;border-top:1px solid var(--line)}
 .visual span{font-family:var(--display);font-weight:700;font-size:20px;color:#fff;opacity:.85}
 .visual.has-img{padding:0;background:var(--surface-2);aspect-ratio:16/9}
 .visual.has-img img{width:100%;height:100%;object-fit:cover}
+.slider{position:relative;padding:0}
+.slider .track{display:flex;width:100%;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.slider .track::-webkit-scrollbar{display:none}
+.slider .slide{flex:0 0 100%;scroll-snap-align:start}
+.slider .slide img{width:100%;height:100%;object-fit:cover}
+.slider .nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:22px;border:1px solid rgba(255,255,255,.25);background:rgba(11,15,25,.7);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.slider .nav:hover{background:rgba(91,123,255,.85)}
+.slider .prev{left:12px}.slider .next{right:12px}
+.slider .dots{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:4px}
+.slider .dot{width:28px;height:28px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.slider .dot::after{content:"";width:8px;height:8px;border-radius:4px;background:rgba(255,255,255,.5)}
+.slider .dot.on::after{background:#fff;width:20px}
 .case-body{display:flex;flex-direction:column;gap:14px}
 .case-meta{display:flex;flex-wrap:wrap;gap:8px}
 .tag{font-size:12px;font-weight:600;color:var(--accent-2);border:1px solid #33407A;background:rgba(91,123,255,.08);border-radius:999px;padding:4px 10px}
@@ -264,14 +276,41 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </article>
 
         <article class="case">
-          <div class="visual has-img"><img src="/img/metarace-ido-sold-out.webp" alt="MetaRace IDO 100% sold, with Caduceus and CoinSwap" width="1600" height="900" loading="lazy"></div>
+          <div class="visual has-img slider" aria-roledescription="carousel" aria-label="Caduceus campaign visuals">
+            <div class="track"><div class="slide"><img src="/img/caduceus-bitkeep-launchpad.webp" alt="BitKeep LaunchPad for CMP closes 1286% oversubscribed" width="1600" height="900" loading="lazy"></div><div class="slide"><img src="/img/caduceus-cmc-airdrop.webp" alt="Caduceus x CoinMarketCap airdrop event, 62,500 CMP" width="1600" height="900" loading="lazy"></div><div class="slide"><img src="/img/caduceus-nunu-airdrop.webp" alt="NUNU Spirits x Caduceus airdrop" width="1600" height="900" loading="lazy"></div></div>
+            <button class="nav prev" type="button" aria-label="Previous image"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="nav next" type="button" aria-label="Next image"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="dots"><button class="dot" type="button" aria-label="Show image 1"></button><button class="dot" type="button" aria-label="Show image 2"></button><button class="dot" type="button" aria-label="Show image 3"></button></div>
+          </div>
           <div class="case-body">
-            <div class="case-meta"><span class="tag">Web3</span><span class="tag">IDO</span><span class="tag">Exchange listing</span></div>
-            <h3>From go-to-market to IDO and exchange listing</h3>
-            <p class="sub">Chain Tech Sdn Bhd · Client projects · 2021 – 2023</p>
+            <div class="case-meta"><span class="tag">Web3 infrastructure</span><span class="tag">Launchpad &amp; IDO</span><span class="tag">BD</span></div>
+            <h3>Caduceus: a launchpad sale 1,286% oversubscribed</h3>
+            <p class="sub">Chain Tech Sdn Bhd · Client project · Jul 2021 – Jan 2023</p>
             <ul>
-              <li><strong>Caduceus:</strong> led BD and content planning; took the project through its IDO on DAOLaunch and onto exchange listings, CoinMarketCap and CoinGecko</li>
-              <li><strong>MetaRace:</strong> owned content and social campaign planning, ran social media, planned game version releases and ran the IDO launch campaign</li>
+              <li>Led BD and content planning for a modular infrastructure layer for AI, the Metaverse and Web3</li>
+              <li>Took CMP through its IDO on DAOLaunch and the BitKeep LaunchPad, which closed 1,286% oversubscribed</li>
+              <li>Got listed on exchanges, CoinMarketCap and CoinGecko, and ran a 62,500 CMP airdrop with CoinMarketCap</li>
+              <li>Built co-marketing airdrops with ecosystem partners such as NUNU Spirits</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="visual has-img slider" aria-roledescription="carousel" aria-label="MetaRace campaign visuals">
+            <div class="track"><div class="slide"><img src="/img/metarace-ido-sold-out.webp" alt="MetaRace IDO 100% sold, with Caduceus and CoinSwap" width="1600" height="900" loading="lazy"></div><div class="slide"><img src="/img/metarace-ido-daostarter.webp" alt="MetaRace $META IDO on DAOStarter" width="1600" height="900" loading="lazy"></div><div class="slide"><img src="/img/metarace-hero.webp" alt="MetaRace key visual of a robotic racehorse" width="1600" height="900" loading="lazy"></div></div>
+            <button class="nav prev" type="button" aria-label="Previous image"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="nav next" type="button" aria-label="Next image"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="dots"><button class="dot" type="button" aria-label="Show image 1"></button><button class="dot" type="button" aria-label="Show image 2"></button><button class="dot" type="button" aria-label="Show image 3"></button></div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta"><span class="tag">GameFi</span><span class="tag">Play-to-Earn</span><span class="tag">IDO</span></div>
+            <h3>MetaRace: an IDO that sold out 100%</h3>
+            <p class="sub">Chain Tech Sdn Bhd · Client project · Jan 2022 – Dec 2023</p>
+            <ul>
+              <li>Owned content and social campaign planning for a Play-to-Earn racing game, from go-to-market to launch</li>
+              <li>Ran social media and community engagement across X, Telegram and Discord</li>
+              <li>Planned game version releases with the product team</li>
+              <li>Ran the $META IDO campaign on DAOStarter, which sold out 100%</li>
             </ul>
           </div>
         </article>
@@ -375,5 +414,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div class="wrap"><span>© 2026 Zen Teh</span><span>Kuala Lumpur, Malaysia</span></div>
 </footer>
 
+<script>
+document.querySelectorAll('.slider').forEach(function(sl){
+  var t=sl.querySelector('.track'),d=sl.querySelectorAll('.dot'),n=d.length;
+  function idx(){return Math.round(t.scrollLeft/t.clientWidth)}
+  function go(i){i=(i+n)%n;t.scrollTo({left:i*t.clientWidth})}
+  function mark(){var i=idx();d.forEach(function(x,j){x.classList.toggle('on',j===i);x.setAttribute('aria-current',j===i?'true':'false')})}
+  sl.querySelector('.prev').addEventListener('click',function(){go(idx()-1)});
+  sl.querySelector('.next').addEventListener('click',function(){go(idx()+1)});
+  d.forEach(function(x,j){x.addEventListener('click',function(){go(j)})});
+  t.addEventListener('scroll',function(){window.requestAnimationFrame(mark)});mark();
+});
+</script>
 </body>
 </html>
