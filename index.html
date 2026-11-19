@@ -94,6 +94,8 @@ section{padding:96px 0;border-top:1px solid var(--line)}
 .slider .track::-webkit-scrollbar{display:none}
 .slider .slide{flex:0 0 100%;scroll-snap-align:start}
 .slider .slide img{width:100%;height:100%;object-fit:cover}
+.slider.contain .slide{background:#0E1322}
+.slider.contain .slide img{object-fit:contain}
 .slider .nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:22px;border:1px solid rgba(255,255,255,.25);background:rgba(11,15,25,.7);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
 .slider .nav:hover{background:rgba(91,123,255,.85)}
 .slider .prev{left:12px}.slider .next{right:12px}
@@ -316,14 +318,34 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </article>
 
         <article class="case">
-          <div class="visual"><span>LightCycle · AGB</span></div>
+          <div class="visual has-img slider contain" aria-roledescription="carousel" aria-label="Apes Go Bananas campaign visuals">
+            <div class="track"><div class="slide"><img src="/img/agb-mexc-listing.webp" alt="AGB/USDT listing on MEXC Global, trading from 29 May" loading="lazy"></div><div class="slide"><img src="/img/agb-bitget-listing.webp" alt="Apes Go Bananas listing on Bitget, 6 July 2023" loading="lazy"></div><div class="slide"><img src="/img/agb-kucoin-ama.webp" alt="AMA with Apes Go Bananas on KuCoin Memecoins, 30 June 2023" loading="lazy"></div><div class="slide"><img src="/img/agb-bitget-earn.webp" alt="Bitget AGB earn campaign with up to 200% APR" loading="lazy"></div></div>
+            <button class="nav prev" type="button" aria-label="Previous image"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="nav next" type="button" aria-label="Next image"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="dots"><button class="dot" type="button" aria-label="Show image 1"></button><button class="dot" type="button" aria-label="Show image 2"></button><button class="dot" type="button" aria-label="Show image 3"></button><button class="dot" type="button" aria-label="Show image 4"></button></div>
+          </div>
           <div class="case-body">
-            <div class="case-meta"><span class="tag">Metaverse &amp; NFT</span><span class="tag">Meme coin</span><span class="tag">KOL</span></div>
-            <h3>Community campaigns for Metaverse, NFT and meme coin launches</h3>
-            <p class="sub">Chain Tech Sdn Bhd · Client projects · 2022 – 2024</p>
+            <div class="case-meta"><span class="tag">Meme coin</span><span class="tag">Exchange listings</span><span class="tag">KOL</span></div>
+            <h3>Apes Go Bananas: from community launch to MEXC and Bitget</h3>
+            <p class="sub">Chain Tech Sdn Bhd · Client project · 2023</p>
             <ul>
-              <li><strong>LightCycle:</strong> as marketing team lead, owned content and social campaigns; helped launch the airdrop system and led the OG NFT campaign</li>
-              <li><strong>Apes Go Bananas (AGB):</strong> led content, creative and KOL partnerships for a community meme coin built around the BAYC and HAPE NFT communities</li>
+              <li>Led content, creative and KOL partnerships for a community meme coin built around the BAYC and HAPE NFT communities</li>
+              <li>Supported listings on MEXC Global (May 2023) and Bitget (July 2023)</li>
+              <li>Ran exchange co-marketing, including a Bitget Earn campaign and an AMA with KuCoin Memecoins</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="visual"><span>LightCycle</span></div>
+          <div class="case-body">
+            <div class="case-meta"><span class="tag">Metaverse &amp; NFT</span><span class="tag">Airdrop</span><span class="tag">Community</span></div>
+            <h3>LightCycle: airdrop and OG NFT campaigns for a virtual city</h3>
+            <p class="sub">Chain Tech Sdn Bhd · Client project · Jul 2022 – Jul 2024</p>
+            <ul>
+              <li>As marketing team lead, owned content planning, social campaign planning and social media operations</li>
+              <li>Helped launch the airdrop system with partner Web3 projects</li>
+              <li>Led the OG NFT campaign, driving community engagement</li>
             </ul>
           </div>
         </article>
