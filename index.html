@@ -94,6 +94,7 @@ section{padding:96px 0;border-top:1px solid var(--line)}
 .slider .track::-webkit-scrollbar{display:none}
 .slider .slide{flex:0 0 100%;scroll-snap-align:start}
 .slider .slide img{width:100%;height:100%;object-fit:cover}
+.slider.r43{aspect-ratio:4/3}
 .slider.contain .slide{background:#0E1322}
 .slider.contain .slide img{object-fit:contain}
 .slider .nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:22px;border:1px solid rgba(255,255,255,.25);background:rgba(11,15,25,.7);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
@@ -228,14 +229,20 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="work">
 
         <article class="case">
-          <div class="visual"><span>MOVA · Product launches</span></div>
+          <div class="visual has-img slider r43" aria-roledescription="carousel" aria-label="MOVA campaign visuals for Hong Kong and Australia">
+            <div class="track"><div class="slide"><img src="/img/mova-hk-campaigns.webp" alt="MOVA Hong Kong campaigns: member month, Z70 launch, HKTVmall livestream and Double 11 sale" loading="lazy"></div><div class="slide"><img src="/img/mova-au-black-friday.webp" alt="MOVA Australia Black Friday campaigns with JB Hi-Fi, Harvey Norman, Amazon and Big W" loading="lazy"></div></div>
+            <button class="nav prev" type="button" aria-label="Previous image"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="nav next" type="button" aria-label="Next image"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="dots"><button class="dot" type="button" aria-label="Show image 1"></button><button class="dot" type="button" aria-label="Show image 2"></button></div>
+          </div>
           <div class="case-body">
             <div class="case-meta"><span class="tag">Consumer tech</span><span class="tag">Meta &amp; Google Ads</span><span class="tag">HK · TW · AU/NZ</span></div>
-            <h3>Three-phase launches for a smart home brand</h3>
+            <h3>Launches and sale campaigns for a smart home brand</h3>
             <p class="sub">MOVA TECH · Digital Marketing Lead · Dec 2025 – Present</p>
             <ul>
               <li>Built launch plans for flagship products in three phases: teaser, early-bird pre-order and general sale</li>
               <li>Lined up paid, organic, KOL and retail on one launch calendar</li>
+              <li>Ran seasonal and platform campaigns: member month, Double 11 and an HKTVmall livestream in Hong Kong; Black Friday with JB Hi-Fi, Harvey Norman, Amazon and Big W in Australia</li>
               <li>Wrote all Traditional Chinese ad copy in-house for Hong Kong and Taiwan</li>
             </ul>
           </div>
